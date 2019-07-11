@@ -1,0 +1,15 @@
+<h1>Edit user form</h1>
+
+<%= form_for @user, url: {action: "update"}, html: {method: "patch"} do  |f| %>
+
+  <%= render "error_messages", :target => @user %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <br>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.submit "Submit" %>
+<% end %>
